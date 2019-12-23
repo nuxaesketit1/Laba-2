@@ -1,25 +1,18 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
-
-int main()
+int main() 
 {
-setlocale(LC_ALL, "Russian");
-	double A, B, C, BC, AC,proizv;
-  cout << "A, B, C: ";
-	cin >> A >> B >> C;
-	if (A >= C) {
-		AC = A - C;
-	}
-	else {
-		AC = C - A;
-	}
-	if (B >= C) {
-		BC = B - C;
-	}
-	else {
-		BC = C - B;
-	}
-	proizv = BC * AC;
-	cout << "Произведение: " << proizv;
-	return 0;
+    cout<<"Vvedite tochki"<<endl;
+    int a,ac,bc,b,c,pr;
+    cin>>a>>b>>c;
+    if (((c>a)&&(c>b))||((c<a)&&(c<b))){
+        cout<<"ERROR"<<endl;}
+    else {
+        ac=abs(a-c);
+        bc=abs(b-c);
+        pr=ac*bc;
+    cout<<"Proizvedenie="<<pr<<endl;
+    }
+    return 0;
 }
